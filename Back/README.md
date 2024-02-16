@@ -1,5 +1,5 @@
 # API_FOOT
-Ce projet consiste à utiliser une API afin de renvoyer des données des voulues sur notre application.
+Ce projet consiste à utiliser une API de football afin de renvoyer des données des voulues sur notre application.
 
 ## Technologies Utilisées
 - **Langage de programmation**: Typescript
@@ -20,8 +20,24 @@ Ce projet consiste à utiliser une API afin de renvoyer des données des voulues
 ## Exemple d'utilisation
 ### Exemple de récupération d'une équipe
 ```bash
-`${FOOTBALL_API_BASE_URL}?action=get_teams&team_id=${id_team}&APIkey=${this.API_KEY}&q=${team}&lang=fr`
+`${FOOTBALL_API_BASE_URL}?action=get_teams&team_id=${id_team}&APIkey=${this.API_KEY}`
 ```
+id_team -> psg = 100
+
+
+### Exemple de récupération d'une compétition d'un pays
+```bash
+`${FOOTBALL_API_BASE_URL}?action=get_leagues&country_id=${id_country}&APIkey=${this.API_KEY}`
+```
+id_country -> france = 3
+
+
+### Exemple de récupération d'un joueur
+```bash
+`${FOOTBALL_API_BASE_URL}?action=get_players&player_name=${player_name}&APIkey=${this.API_KEY}`
+```
+player_name = Benzema
+
 
 ## Guide d'installation
 
@@ -33,4 +49,6 @@ cd API_FOOT
 cd Back
 
 npm install
+
+npm start
 ```
